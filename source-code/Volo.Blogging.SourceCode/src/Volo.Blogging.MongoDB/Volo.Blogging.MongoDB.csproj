@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>Volo.Blogging.MongoDB</AssemblyName>
+    <PackageId>Volo.Blogging.MongoDB</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Volo.Blogging.Domain\Volo.Blogging.Domain.csproj" />
+    <PackageReference Include="Volo.Abp.MongoDB" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Users.MongoDB" Version="9.3.0-rc.1" />
+  </ItemGroup>
+</Project>

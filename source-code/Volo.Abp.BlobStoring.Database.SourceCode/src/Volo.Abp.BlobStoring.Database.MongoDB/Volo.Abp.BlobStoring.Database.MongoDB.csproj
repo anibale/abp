@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0;net9.0</TargetFrameworks>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.MongoDB" Version="9.3.0-rc.1" />
+    <ProjectReference Include="..\Volo.Abp.BlobStoring.Database.Domain\Volo.Abp.BlobStoring.Database.Domain.csproj" />
+  </ItemGroup>
+</Project>

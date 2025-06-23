@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>Volo.Docs.Common.HttpApi</AssemblyName>
+    <PackageId>Volo.Docs.Common.HttpApi</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Volo.Docs.Common.Application.Contracts\Volo.Docs.Common.Application.Contracts.csproj" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="9.3.0-rc.1" />
+  </ItemGroup>
+</Project>

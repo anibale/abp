@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net8.0;net9.0</TargetFrameworks>
+    <AssemblyName>Volo.Docs.Application.Contracts</AssemblyName>
+    <PackageId>Volo.Docs.Application.Contracts</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Volo.Docs.Common.Application.Contracts\Volo.Docs.Common.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Volo.Docs.Domain.Shared\Volo.Docs.Domain.Shared.csproj" />
+    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="9.3.0-rc.1" />
+  </ItemGroup>
+</Project>

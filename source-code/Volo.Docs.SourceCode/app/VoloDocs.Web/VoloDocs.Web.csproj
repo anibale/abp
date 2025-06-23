@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>net9.0</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <RuntimeIdentifiers>win-x64;osx-x64;linux-x64</RuntimeIdentifiers>
+    <UserSecretsId>5f11b41f-0025-4fe6-ab97-60ec1bd4e8c2</UserSecretsId>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Resources\VoloDocs\Web\*.json" />
+    <Content Remove="Localization\Resources\VoloDocs\Web\*.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Volo.Docs.Application\Volo.Docs.Application.csproj" />
+    <ProjectReference Include="..\..\src\Volo.Docs.HttpApi\Volo.Docs.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\Volo.Docs.Admin.Application\Volo.Docs.Admin.Application.csproj" />
+    <ProjectReference Include="..\..\src\Volo.Docs.Admin.HttpApi\Volo.Docs.Admin.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\Volo.Docs.Web\Volo.Docs.Web.csproj" />
+    <ProjectReference Include="..\..\src\Volo.Docs.Admin.Web\Volo.Docs.Admin.Web.csproj" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="9.3.0-rc.1" />
+    <ProjectReference Include="..\VoloDocs.EntityFrameworkCore\VoloDocs.EntityFrameworkCore.csproj" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Identity.Web" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Account.Web" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="9.3.0-rc.1" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs" Version="9.3.0-rc.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\**\*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
